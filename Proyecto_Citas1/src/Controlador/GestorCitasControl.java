@@ -24,8 +24,6 @@ public class GestorCitasControl implements ActionListener{
         citasModelo= new Modelo.GestorCitas();
     }
     
-    
-    
     @Override
     public void actionPerformed(ActionEvent e) {
         
