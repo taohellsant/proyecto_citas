@@ -29,19 +29,19 @@ public class ConsCitasInternalFrame extends javax.swing.JInternalFrame {
 
         btngrBusCitas = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        jrNumeCita = new javax.swing.JRadioButton();
+        jrEstaCitas = new javax.swing.JRadioButton();
+        jrFechaCita = new javax.swing.JRadioButton();
+        jrIdenMedico = new javax.swing.JRadioButton();
+        jrHoraCita = new javax.swing.JRadioButton();
+        jrObserCitas = new javax.swing.JRadioButton();
+        jrIdenPaciente = new javax.swing.JRadioButton();
+        jrCodiConsultorio = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtValorCita = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        jtCitas = new javax.swing.JTable();
+        btnBusCita = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBorder(null);
@@ -55,51 +55,51 @@ public class ConsCitasInternalFrame extends javax.swing.JInternalFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btngrBusCitas.add(jRadioButton1);
-        jRadioButton1.setText("Numero de cita");
-        jRadioButton1.setOpaque(false);
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        btngrBusCitas.add(jrNumeCita);
+        jrNumeCita.setText("Numero de cita");
+        jrNumeCita.setOpaque(false);
+        jPanel1.add(jrNumeCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
-        btngrBusCitas.add(jRadioButton2);
-        jRadioButton2.setText("Estado");
-        jRadioButton2.setOpaque(false);
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+        btngrBusCitas.add(jrEstaCitas);
+        jrEstaCitas.setText("Estado");
+        jrEstaCitas.setOpaque(false);
+        jPanel1.add(jrEstaCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
-        btngrBusCitas.add(jRadioButton3);
-        jRadioButton3.setText("Fecha");
-        jRadioButton3.setOpaque(false);
-        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, -1, -1));
+        btngrBusCitas.add(jrFechaCita);
+        jrFechaCita.setText("Fecha");
+        jrFechaCita.setOpaque(false);
+        jPanel1.add(jrFechaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, -1, -1));
 
-        btngrBusCitas.add(jRadioButton4);
-        jRadioButton4.setText("identificacion medico");
-        jRadioButton4.setOpaque(false);
-        jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
+        btngrBusCitas.add(jrIdenMedico);
+        jrIdenMedico.setText("identificacion medico");
+        jrIdenMedico.setOpaque(false);
+        jPanel1.add(jrIdenMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
 
-        btngrBusCitas.add(jRadioButton5);
-        jRadioButton5.setText("Hora");
-        jRadioButton5.setOpaque(false);
-        jPanel1.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
+        btngrBusCitas.add(jrHoraCita);
+        jrHoraCita.setText("Hora");
+        jrHoraCita.setOpaque(false);
+        jPanel1.add(jrHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
-        btngrBusCitas.add(jRadioButton6);
-        jRadioButton6.setText("Observaciones");
-        jRadioButton6.setOpaque(false);
-        jPanel1.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
+        btngrBusCitas.add(jrObserCitas);
+        jrObserCitas.setText("Observaciones");
+        jrObserCitas.setOpaque(false);
+        jPanel1.add(jrObserCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
 
-        btngrBusCitas.add(jRadioButton7);
-        jRadioButton7.setText("Identificacion paciente");
-        jRadioButton7.setOpaque(false);
-        jPanel1.add(jRadioButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
+        btngrBusCitas.add(jrIdenPaciente);
+        jrIdenPaciente.setText("Identificacion paciente");
+        jrIdenPaciente.setOpaque(false);
+        jPanel1.add(jrIdenPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
 
-        btngrBusCitas.add(jRadioButton8);
-        jRadioButton8.setText("Codigo consultorio");
-        jRadioButton8.setOpaque(false);
-        jPanel1.add(jRadioButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+        btngrBusCitas.add(jrCodiConsultorio);
+        jrCodiConsultorio.setText("Codigo consultorio");
+        jrCodiConsultorio.setOpaque(false);
+        jPanel1.add(jrCodiConsultorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         jLabel2.setText("Valor a buscar:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 110, -1));
+        jPanel1.add(txtValorCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 110, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtCitas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -110,13 +110,13 @@ public class ConsCitasInternalFrame extends javax.swing.JInternalFrame {
 
             }
         ));
-        jTable1.setOpaque(false);
-        jScrollPane1.setViewportView(jTable1);
+        jtCitas.setOpaque(false);
+        jScrollPane1.setViewportView(jtCitas);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, 90));
 
-        jButton1.setText("Buscar");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, -1));
+        btnBusCita.setText("Buscar");
+        jPanel1.add(btnBusCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_citas1/FondoConsulCitas.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -129,21 +129,21 @@ public class ConsCitasInternalFrame extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnBusCita;
     private javax.swing.ButtonGroup btngrBusCitas;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JRadioButton jrCodiConsultorio;
+    public javax.swing.JRadioButton jrEstaCitas;
+    public javax.swing.JRadioButton jrFechaCita;
+    public javax.swing.JRadioButton jrHoraCita;
+    public javax.swing.JRadioButton jrIdenMedico;
+    public javax.swing.JRadioButton jrIdenPaciente;
+    public javax.swing.JRadioButton jrNumeCita;
+    public javax.swing.JRadioButton jrObserCitas;
+    public javax.swing.JTable jtCitas;
+    public javax.swing.JTextField txtValorCita;
     // End of variables declaration//GEN-END:variables
 }

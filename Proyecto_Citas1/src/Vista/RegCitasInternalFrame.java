@@ -11,13 +11,14 @@ package Vista;
  */
 public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form ConsCitasInternalFrame
-     */
+     private Controlador.CitasControl citasControlador;
+    
     public RegCitasInternalFrame() {
         initComponents();
+        citasControlador  = new Controlador.CitasControl(this);
+        btnRegisCita.addActionListener(citasControlador);
+        btnNuevaCita.addActionListener(citasControlador);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,19 +34,19 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        txtNumCitas = new javax.swing.JTextField();
+        txtIdenMedico = new javax.swing.JTextField();
+        txtEstaCita = new javax.swing.JTextField();
+        txtObserCita = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jdtFechaCita = new com.toedter.calendar.JDateChooser();
+        txtHoraCita = new javax.swing.JTextField();
+        txtNumeConsultorio = new javax.swing.JTextField();
+        txtIdenPaciente = new javax.swing.JTextField();
+        btnRegisCita = new javax.swing.JButton();
+        btnNuevaCita = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBorder(null);
@@ -72,10 +73,10 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
 
         jLabel6.setText("Estado");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 90, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 90, -1));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 90, -1));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 90, -1));
+        jPanel1.add(txtNumCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 90, -1));
+        jPanel1.add(txtIdenMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 90, -1));
+        jPanel1.add(txtEstaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 90, -1));
+        jPanel1.add(txtObserCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 90, -1));
 
         jLabel7.setText("Identificación del medico");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
@@ -85,18 +86,18 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
 
         jLabel9.setText("Identificación paciente");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
-        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 90, -1));
+        jPanel1.add(jdtFechaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 90, -1));
 
-        jTextField5.setText("00:00");
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 90, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 90, -1));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 90, -1));
+        txtHoraCita.setText("00:00");
+        jPanel1.add(txtHoraCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 90, -1));
+        jPanel1.add(txtNumeConsultorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 90, -1));
+        jPanel1.add(txtIdenPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 90, -1));
 
-        jButton1.setText("Registrar");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+        btnRegisCita.setText("Registrar");
+        jPanel1.add(btnRegisCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
-        jButton2.setText("Nuevo");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, -1, -1));
+        btnNuevaCita.setText("Nuevo");
+        jPanel1.add(btnNuevaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_citas1/FondoConsulCitas.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 0, 580, 360));
@@ -108,9 +109,8 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    public javax.swing.JButton btnNuevaCita;
+    public javax.swing.JButton btnRegisCita;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -121,12 +121,13 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    public com.toedter.calendar.JDateChooser jdtFechaCita;
+    public javax.swing.JTextField txtEstaCita;
+    public javax.swing.JTextField txtHoraCita;
+    public javax.swing.JTextField txtIdenMedico;
+    public javax.swing.JTextField txtIdenPaciente;
+    public javax.swing.JTextField txtNumCitas;
+    public javax.swing.JTextField txtNumeConsultorio;
+    public javax.swing.JTextField txtObserCita;
     // End of variables declaration//GEN-END:variables
 }

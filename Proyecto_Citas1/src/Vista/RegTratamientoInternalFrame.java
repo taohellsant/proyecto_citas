@@ -11,11 +11,13 @@ package Vista;
  */
 public class RegTratamientoInternalFrame extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form ConsTratamientoInternalFrame
-     */
+    private Controlador.TratamientoControl tratamientoControlador;
+    
     public RegTratamientoInternalFrame() {
         initComponents();
+        tratamientoControlador  = new Controlador.TratamientoControl(this);
+        btnRegTratamiento.addActionListener(tratamientoControlador);
+        btnNuevTratamiento.addActionListener(tratamientoControlador);
     }
 
     /**
@@ -34,14 +36,14 @@ public class RegTratamientoInternalFrame extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        txtCodiTratamiento = new javax.swing.JTextField();
+        txtDesTratamiento = new javax.swing.JTextField();
+        txtIdenPaciente = new javax.swing.JTextField();
+        btnRegTratamiento = new javax.swing.JButton();
+        btnNuevTratamiento = new javax.swing.JButton();
+        jdFeAsignada = new com.toedter.calendar.JDateChooser();
+        jdFeInicio = new com.toedter.calendar.JDateChooser();
+        jdFeFinal = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
 
         setBorder(null);
@@ -71,18 +73,18 @@ public class RegTratamientoInternalFrame extends javax.swing.JInternalFrame {
 
         jLabel7.setText("Identificacion del paciente");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 80, -1));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 80, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 80, -1));
+        jPanel1.add(txtCodiTratamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 80, -1));
+        jPanel1.add(txtDesTratamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 80, -1));
+        jPanel1.add(txtIdenPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 80, -1));
 
-        jButton1.setText("Registrar");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
+        btnRegTratamiento.setText("Registrar");
+        jPanel1.add(btnRegTratamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
 
-        jButton2.setText("Nuevo");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, -1, -1));
-        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
-        jPanel1.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, -1, -1));
-        jPanel1.add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+        btnNuevTratamiento.setText("Nuevo");
+        jPanel1.add(btnNuevTratamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, -1, -1));
+        jPanel1.add(jdFeAsignada, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
+        jPanel1.add(jdFeInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, -1, -1));
+        jPanel1.add(jdFeFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_citas1/calendario-tratamiento-medico-gestion-tiempo_23-2148438973.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 0, 540, 300));
@@ -94,11 +96,8 @@ public class RegTratamientoInternalFrame extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
+    public javax.swing.JButton btnNuevTratamiento;
+    public javax.swing.JButton btnRegTratamiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -107,8 +106,11 @@ public class RegTratamientoInternalFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    public com.toedter.calendar.JDateChooser jdFeAsignada;
+    public com.toedter.calendar.JDateChooser jdFeFinal;
+    public com.toedter.calendar.JDateChooser jdFeInicio;
+    public javax.swing.JTextField txtCodiTratamiento;
+    public javax.swing.JTextField txtDesTratamiento;
+    public javax.swing.JTextField txtIdenPaciente;
     // End of variables declaration//GEN-END:variables
 }

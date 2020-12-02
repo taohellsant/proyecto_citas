@@ -5,17 +5,23 @@
  */
 package Vista;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author maria
  */
 public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form RegTratamientoInternalFrame
-     */
+    public Controlador.GestorTratamientoControl gestortratamientoControl;
+    private DefaultTableModel tabla;
     public ConsTratamientoInternalFrame() {
         initComponents();
+        gestortratamientoControl =new Controlador.GestorTratamientoControl(this);
+        String titulosTabla[]={"Identificacion","Nombres","Apelllidos","Fecha Nacimiento", "Genero"};     
+        tabla=new DefaultTableModel(null, titulosTabla);
+        jtConsTratamiento.setModel(tabla);
+        btnTraBuscar.addActionListener(gestortratamientoControl);
     }
 
     /**
@@ -29,17 +35,17 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
 
         btgrTratamiento = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        jrCodiTratamiento = new javax.swing.JRadioButton();
+        jrFeAsignacion = new javax.swing.JRadioButton();
+        jrFeInicio = new javax.swing.JRadioButton();
+        jrFeFinal = new javax.swing.JRadioButton();
+        jrDesTratamiento = new javax.swing.JRadioButton();
+        jrIdenPaciente = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtTraValor = new javax.swing.JTextField();
+        btnTraBuscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtConsTratamiento = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setBorder(null);
@@ -51,45 +57,45 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btgrTratamiento.add(jRadioButton1);
-        jRadioButton1.setText("Codigo tratamiento");
-        jRadioButton1.setOpaque(false);
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        btgrTratamiento.add(jrCodiTratamiento);
+        jrCodiTratamiento.setText("Codigo tratamiento");
+        jrCodiTratamiento.setOpaque(false);
+        jPanel1.add(jrCodiTratamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        btgrTratamiento.add(jRadioButton2);
-        jRadioButton2.setText("Fecha asignacion");
-        jRadioButton2.setOpaque(false);
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
+        btgrTratamiento.add(jrFeAsignacion);
+        jrFeAsignacion.setText("Fecha asignacion");
+        jrFeAsignacion.setOpaque(false);
+        jPanel1.add(jrFeAsignacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
 
-        btgrTratamiento.add(jRadioButton3);
-        jRadioButton3.setText("Fecha inicio tratamiento");
-        jRadioButton3.setOpaque(false);
-        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
+        btgrTratamiento.add(jrFeInicio);
+        jrFeInicio.setText("Fecha inicio tratamiento");
+        jrFeInicio.setOpaque(false);
+        jPanel1.add(jrFeInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
 
-        btgrTratamiento.add(jRadioButton4);
-        jRadioButton4.setText("Fecha final tratamiento");
-        jRadioButton4.setOpaque(false);
-        jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        btgrTratamiento.add(jrFeFinal);
+        jrFeFinal.setText("Fecha final tratamiento");
+        jrFeFinal.setOpaque(false);
+        jPanel1.add(jrFeFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
-        btgrTratamiento.add(jRadioButton5);
-        jRadioButton5.setText("Descripcion tratamiento");
-        jRadioButton5.setOpaque(false);
-        jPanel1.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
+        btgrTratamiento.add(jrDesTratamiento);
+        jrDesTratamiento.setText("Descripcion tratamiento");
+        jrDesTratamiento.setOpaque(false);
+        jPanel1.add(jrDesTratamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
 
-        btgrTratamiento.add(jRadioButton6);
-        jRadioButton6.setText("Identificacion paciente");
-        jRadioButton6.setOpaque(false);
-        jPanel1.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+        btgrTratamiento.add(jrIdenPaciente);
+        jrIdenPaciente.setText("Identificacion paciente");
+        jrIdenPaciente.setOpaque(false);
+        jPanel1.add(jrIdenPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         jLabel2.setText("Valor a buscar:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 100, 20));
+        jPanel1.add(txtTraValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 100, 20));
 
-        jButton1.setText("Buscar");
-        jButton1.setOpaque(false);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
+        btnTraBuscar.setText("Buscar");
+        btnTraBuscar.setOpaque(false);
+        jPanel1.add(btnTraBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtConsTratamiento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -100,7 +106,7 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtConsTratamiento);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 400, 80));
 
@@ -115,18 +121,18 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgrTratamiento;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btnTraBuscar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JRadioButton jrCodiTratamiento;
+    public javax.swing.JRadioButton jrDesTratamiento;
+    public javax.swing.JRadioButton jrFeAsignacion;
+    public javax.swing.JRadioButton jrFeFinal;
+    public javax.swing.JRadioButton jrFeInicio;
+    public javax.swing.JRadioButton jrIdenPaciente;
+    public javax.swing.JTable jtConsTratamiento;
+    public javax.swing.JTextField txtTraValor;
     // End of variables declaration//GEN-END:variables
 }

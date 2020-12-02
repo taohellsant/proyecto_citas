@@ -11,11 +11,13 @@ package Vista;
  */
 public class RegConsulInternalFrame extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form RegConsulInternalFrame
-     */
+    private Controlador.ConsultorioControl consultorioControlador;
+    
     public RegConsulInternalFrame() {
         initComponents();
+        consultorioControlador  = new Controlador.ConsultorioControl(this);
+        btnRegiConsultorio.addActionListener(consultorioControlador);
+        btnNueConsultorio.addActionListener(consultorioControlador);
     }
 
     /**
@@ -27,20 +29,18 @@ public class RegConsulInternalFrame extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btgrConsulta = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        txtCodiConsultorio = new javax.swing.JTextField();
+        txtNomConsultorio = new javax.swing.JTextField();
+        btnRegiConsultorio = new javax.swing.JButton();
+        btnNueConsultorio = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
-        setForeground(java.awt.Color.darkGray);
+        setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
         setTitle("Registrar consultorio");
@@ -48,58 +48,37 @@ public class RegConsulInternalFrame extends javax.swing.JInternalFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btgrConsulta.add(jRadioButton2);
-        jRadioButton2.setText("Nombre Consultorio");
-        jRadioButton2.setOpaque(false);
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, -1, -1));
+        jLabel2.setText("Codigo de consultorio");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, -1, -1));
 
-        btgrConsulta.add(jRadioButton1);
-        jRadioButton1.setText("Codigo consultorio");
-        jRadioButton1.setOpaque(false);
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 80, -1));
+        jLabel3.setText("Nombre de consultorio");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
+        jPanel1.add(txtCodiConsultorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 90, -1));
+        jPanel1.add(txtNomConsultorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 90, -1));
 
-        jLabel2.setText("Valor a buscar:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
+        btnRegiConsultorio.setText("Registrar");
+        jPanel1.add(btnRegiConsultorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
 
-        jButton1.setText("Buscar");
-        jButton1.setOpaque(false);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, -1, -1));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, 110));
+        btnNueConsultorio.setText("Nuevo");
+        jPanel1.add(btnNueConsultorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_citas1/primer-plano-medicina-empaquetada-blister-estetoscopio-bloc-notas-espiral-sobre-fondo-azul_23-2148214025.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 330));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 0, 540, 370));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 330));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup btgrConsulta;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btnNueConsultorio;
+    public javax.swing.JButton btnRegiConsultorio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField txtCodiConsultorio;
+    public javax.swing.JTextField txtNomConsultorio;
     // End of variables declaration//GEN-END:variables
 }
