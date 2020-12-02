@@ -5,17 +5,23 @@
  */
 package Vista;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author maria
  */
 public class ConsCitasInternalFrame extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form RegCitasInternalFrame
-     */
+   public Controlador.GestorCitasControl gestorcitasControl;
+    private DefaultTableModel tabla;
     public ConsCitasInternalFrame() {
         initComponents();
+        gestorcitasControl =new Controlador.GestorCitasControl(this);
+        String titulosTabla[]={"Codigo","Nombres"};     
+        tabla=new DefaultTableModel(null, titulosTabla);
+        jtCitas.setModel(tabla);
+        btnBusCita.addActionListener(gestorcitasControl);
     }
 
     /**
