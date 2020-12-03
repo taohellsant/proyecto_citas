@@ -17,6 +17,7 @@ public class Citas {
     private String ObserCita;
     private String EstadoCita;
     private String MeIdentificacion;
+    
     private String CodigoConsulCita;
     private String PaIdentificacion;
 
