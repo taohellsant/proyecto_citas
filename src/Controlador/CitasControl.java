@@ -17,6 +17,7 @@ public class CitasControl implements ActionListener{
     
     Vista.RegCitasInternalFrame citasVista;
     Modelo.Citas citasModelo;
+    
     Modelo.GestorCitas gestorCitasModelo;
     
     
