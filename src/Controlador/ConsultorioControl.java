@@ -26,7 +26,7 @@ public class ConsultorioControl implements ActionListener {
         gestorConsultorioModelo= new Modelo.GestorConsultorio();
     }
 @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {   
         if (e.getSource().equals(consultorioVista.btnRegiConsultorio)){
          String CodiConsultorio=consultorioVista.txtCodiConsultorio.getText();
          String NombConsultorio=consultorioVista.txtNomConsultorio.getText();
