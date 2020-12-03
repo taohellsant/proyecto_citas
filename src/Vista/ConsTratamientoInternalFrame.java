@@ -34,6 +34,11 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         btgrTratamiento = new javax.swing.ButtonGroup();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        label1 = new java.awt.Label();
+        menuBar1 = new java.awt.MenuBar();
+        menu1 = new java.awt.Menu();
+        menu2 = new java.awt.Menu();
         jPanel1 = new javax.swing.JPanel();
         jrCodiTratamiento = new javax.swing.JRadioButton();
         jrFeAsignacion = new javax.swing.JRadioButton();
@@ -48,11 +53,22 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
         jtConsTratamiento = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
+        jInternalFrame1.setVisible(true);
+
+        label1.setText("label1");
+
+        menu1.setLabel("File");
+        menuBar1.add(menu1);
+
+        menu2.setLabel("Edit");
+        menuBar1.add(menu2);
+
         setBorder(null);
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Consultar tratamiento");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -111,7 +127,7 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 400, 80));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_citas1/calendario-tratamiento-medico-gestion-tiempo_23-2148438973.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 0, 590, 300));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 0, 590, 300));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 280));
 
@@ -122,6 +138,7 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgrTratamiento;
     public javax.swing.JButton btnTraBuscar;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -133,6 +150,10 @@ public class ConsTratamientoInternalFrame extends javax.swing.JInternalFrame {
     public javax.swing.JRadioButton jrFeInicio;
     public javax.swing.JRadioButton jrIdenPaciente;
     public javax.swing.JTable jtConsTratamiento;
+    private java.awt.Label label1;
+    private java.awt.Menu menu1;
+    private java.awt.Menu menu2;
+    private java.awt.MenuBar menuBar1;
     public javax.swing.JTextField txtTraValor;
     // End of variables declaration//GEN-END:variables
 }
