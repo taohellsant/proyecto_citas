@@ -35,7 +35,7 @@ public class CitasControl implements ActionListener{
          String Hora_Citas=citasVista.txtHoraCita.getText();
          String Observaciones=citasVista.txtObserCita.getText();
          String Estado_Cita=citasVista.txtEstaCita.getText();
-         String Iden_Medico=citasVista.jdtFechaCita.getDateFormatString();
+         String Iden_Medico=citasVista.txtIdenMedico.getText();
          String Codigo_Consultorio=citasVista.txtNumeConsultorio.getText();
          String Iden_Paciente=citasVista.txtIdenPaciente.getText();
           
