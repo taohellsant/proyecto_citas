@@ -35,7 +35,6 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtNumCitas = new javax.swing.JTextField();
-        txtIdenMedico = new javax.swing.JTextField();
         txtEstaCita = new javax.swing.JTextField();
         txtObserCita = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -47,6 +46,7 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
         txtIdenPaciente = new javax.swing.JTextField();
         btnRegisCita = new javax.swing.JButton();
         btnNuevaCita = new javax.swing.JButton();
+        txtIdenMedico = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setBorder(null);
@@ -74,7 +74,6 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
         jLabel6.setText("Estado");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, -1, -1));
         jPanel1.add(txtNumCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 90, -1));
-        jPanel1.add(txtIdenMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 90, -1));
         jPanel1.add(txtEstaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 90, -1));
         jPanel1.add(txtObserCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 90, -1));
 
@@ -98,9 +97,10 @@ public class RegCitasInternalFrame extends javax.swing.JInternalFrame {
 
         btnNuevaCita.setText("Nuevo");
         jPanel1.add(btnNuevaCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, -1, -1));
+        jPanel1.add(txtIdenMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 80, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_citas1/FondoConsulCitas.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 0, 580, 360));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 0, 580, 360));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 330));
 

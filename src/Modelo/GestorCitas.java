@@ -60,27 +60,7 @@ public class GestorCitas {
 
         citas.add(cita);
     }
-    /*/public void Medico(){
-        listaMedico =new Vector();
-        int IdMedico;
-        String sql="";
-        try {
-            try(Statement rs = conectar.getConnection()){
-            ResultSet rs =rs.executeQuery();
-            while(rs.next()){
-                id_doctor = rs.getInt("id_doctor");
-                nombre=cd.get_name_by_id(rs.getInt("id_doctor"));
-                listaDoctor.add(new Doctor(id_doctor, nombre));
-                if(comprobar_horario(id_doctor))
-                     p_reserv.r_selecDoctor.addItem(nombre);
-            }}
-        } catch (SQLException ex) {
-            Logger.getLogger(Control_reserva.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-    }*/
-    
-    
+
     public LinkedList <Citas> getCitasbyParametro(int parametro, String valor){
        con= conectar.getConnection();
      LinkedList <Citas> resultado = new LinkedList <Citas>();

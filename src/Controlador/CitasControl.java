@@ -5,19 +5,27 @@
  */
 package Controlador;
 
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author maria
  */
+
+
 public class CitasControl implements ActionListener{
     
     Vista.RegCitasInternalFrame citasVista;
     Modelo.Citas citasModelo;
-    
+ 
     Modelo.GestorCitas gestorCitasModelo;
     
     
@@ -26,6 +34,9 @@ public class CitasControl implements ActionListener{
         this.citasVista=citasVista;
         gestorCitasModelo= new Modelo.GestorCitas();
     }
+
+    
+
 @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(citasVista.btnRegisCita)){
@@ -35,16 +46,17 @@ public class CitasControl implements ActionListener{
          String Hora_Citas=citasVista.txtHoraCita.getText();
          String Observaciones=citasVista.txtObserCita.getText();
          String Estado_Cita=citasVista.txtEstaCita.getText();
-         String Iden_Medico=citasVista.jdtFechaCita.getDateFormatString();
+         String Iden_Medico=citasVista.txtIdenMedico.getText();
          String Codigo_Consultorio=citasVista.txtNumeConsultorio.getText();
          String Iden_Paciente=citasVista.txtIdenPaciente.getText();
           
            
-        citasModelo=new Modelo.Citas(Numero_Citas, fecha_citas, Hora_Citas, Observaciones, Estado_Cita, Iden_Paciente, Codigo_Consultorio, Iden_Paciente);
+        citasModelo=new Modelo.Citas(Numero_Citas, fecha_citas, Hora_Citas, Observaciones, Estado_Cita, Iden_Medico, Codigo_Consultorio, Iden_Paciente);
 
         gestorCitasModelo.RegistrarCitas(citasModelo);
 
         }
+        
 
         if(e.getSource().equals(citasVista.btnNuevaCita)){
           citasVista.txtNumCitas.setText("");
