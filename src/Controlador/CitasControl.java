@@ -40,7 +40,7 @@ public class CitasControl implements ActionListener{
          String Iden_Paciente=citasVista.txtIdenPaciente.getText();
           
            
-        citasModelo=new Modelo.Citas(Numero_Citas, fecha_citas, Hora_Citas, Observaciones, Estado_Cita, Iden_Paciente, Codigo_Consultorio, Iden_Paciente);
+        citasModelo=new Modelo.Citas(Numero_Citas, fecha_citas, Hora_Citas, Observaciones, Estado_Cita, Iden_Medico, Codigo_Consultorio, Iden_Paciente);
 
         gestorCitasModelo.RegistrarCitas(citasModelo);
 
