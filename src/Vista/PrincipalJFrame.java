@@ -78,6 +78,8 @@ public class PrincipalJFrame extends javax.swing.JFrame {
         jMenuItem11 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 255));
+        setForeground(new java.awt.Color(204, 204, 255));
         getContentPane().setLayout(null);
 
         jMenu1.setText("Archivo");

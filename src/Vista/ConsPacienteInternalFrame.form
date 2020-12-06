@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="btngrPaciente">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
       <Border info="null"/>
@@ -49,6 +53,9 @@
       <SubComponents>
         <Component class="javax.swing.JRadioButton" name="jrIdentificacion">
           <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btngrPaciente"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Identificacion"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
@@ -63,6 +70,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrNombre">
           <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btngrPaciente"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Nombres"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
@@ -77,6 +87,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrApellido">
           <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btngrPaciente"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Apellidos"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>
@@ -91,6 +104,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrSexo">
           <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btngrPaciente"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Genero"/>
             <Property name="opaque" type="boolean" value="false"/>
           </Properties>

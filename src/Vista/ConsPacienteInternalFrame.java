@@ -36,6 +36,7 @@ public class ConsPacienteInternalFrame extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btngrPaciente = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jrIdentificacion = new javax.swing.JRadioButton();
         jrNombre = new javax.swing.JRadioButton();
@@ -59,18 +60,22 @@ public class ConsPacienteInternalFrame extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btngrPaciente.add(jrIdentificacion);
         jrIdentificacion.setText("Identificacion");
         jrIdentificacion.setOpaque(false);
         jPanel1.add(jrIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 15, -1, -1));
 
+        btngrPaciente.add(jrNombre);
         jrNombre.setText("Nombres");
         jrNombre.setOpaque(false);
         jPanel1.add(jrNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 15, -1, -1));
 
+        btngrPaciente.add(jrApellido);
         jrApellido.setText("Apellidos");
         jrApellido.setOpaque(false);
         jPanel1.add(jrApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 15, -1, -1));
 
+        btngrPaciente.add(jrSexo);
         jrSexo.setText("Genero");
         jrSexo.setOpaque(false);
         jrSexo.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +122,7 @@ public class ConsPacienteInternalFrame extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btngrPaciente;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
